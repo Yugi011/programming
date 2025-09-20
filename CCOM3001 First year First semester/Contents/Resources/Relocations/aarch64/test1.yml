@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/adrianirizarry/Desktop/ccom-3001/programs/test1'
+relocations:     []
+...
