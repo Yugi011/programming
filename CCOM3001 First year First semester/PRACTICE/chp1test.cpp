@@ -1,10 +1,3 @@
-/*
-Algoritmo:
-1.declarar variables
-2.entrar resultados del examen
-3.calcular ponderacion (formula = (a + b + c + d) / 400 * 100)
-4.imprimir resultado de ponderacion
-*/
 #include <iomanip>
 #include <iostream>
 #include <cmath>
