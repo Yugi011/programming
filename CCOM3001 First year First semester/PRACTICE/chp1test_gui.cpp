@@ -9,6 +9,8 @@
 #include <sstream>
 #include <string>
 
+using namespace std;
+
 class ExamCalculatorGUI {
 private:
     Fl_Window *window;
@@ -177,10 +179,10 @@ public:
             }
             
             // Obtener valores (exactamente como en chp1test.cpp)
-            double testScore1 = std::stod(score1_input->value());
-            double testScore2 = std::stod(score2_input->value());
-            double testScore3 = std::stod(score3_input->value());
-            double testScore4 = std::stod(score4_input->value());
+            double testScore1 = stod(score1_input->value());
+            double testScore2 = stod(score2_input->value());
+            double testScore3 = stod(score3_input->value());
+            double testScore4 = stod(score4_input->value());
             
             // Validar rango
             if (testScore1 < 0 || testScore1 > 100 || testScore2 < 0 || testScore2 > 100 ||
@@ -195,28 +197,28 @@ public:
             double weightTestScore = (testScore1 + testScore2 + testScore3 + testScore4) / 400;
             
             // Formatear resultado exactamente como en chp1test.cpp
-            std::ostringstream oss;
-            oss << std::fixed << std::setprecision(2);
+            ostringstream oss;
+            oss << fixed << setprecision(2);
             oss << "Weighted Test Score: " << weightTestScore * 100 << "%";
             
             result_output->value(oss.str().c_str());
             result_output->textcolor(fl_rgb_color(34, 139, 34)); // Verde
             
             // Mostrar desglose como en chp1test.cpp
-            std::ostringstream details;
+            ostringstream details;
             details << "-----------------------------------------------------------\n";
             details << "EXAM 1: " << testScore1 << "\n";
             details << "EXAM 2: " << testScore2 << "\n";
             details << "EXAM 3: " << testScore3 << "\n";
             details << "EXAM 4: " << testScore4 << "\n";
             details << "-----------------------------------------------------------\n";
-            details << std::fixed << std::setprecision(2);
+            details << fixed << setprecision(2);
             details << "Weighted Test Score: " << weightTestScore * 100 << "%\n";
             details << "-----------------------------------------------------------";
             
             fl_message("%s", details.str().c_str());
             
-        } catch (const std::exception& e) {
+        } catch (const exception& e) {
             fl_alert("⚠️ Error: Formato de número inválido.\nPor favor ingrese solo números válidos.");
             result_output->value("❌ Error: Formato numérico inválido");
             result_output->textcolor(fl_rgb_color(220, 20, 60));
