@@ -25,5 +25,6 @@ int main()
         c = temp;
     }
     cout << "Orden Ascendente: " << a << " " << b << " " << c << " "<< endl;
+    return 0;
 
 }
