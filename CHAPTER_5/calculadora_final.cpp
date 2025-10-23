@@ -56,7 +56,7 @@ int main()
                 break;
         }
         
-        cout << "\n¿Desea usar la calculadora nuevamente? (s/n): ";
+        cout << "¿Desea usar la calculadora nuevamente? (s/n): ";
         cin >> continuar;
     }
     
